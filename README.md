@@ -1,4 +1,4 @@
- # <a href="https://www.linkedin.com/in/PatilKetan/">Ketan Patil</a> :smiley:
+ # <a href="https://www.linkedin.com/in/PatilKetan/">Ketan Patil</a>
  
  <a href="https://twitter.com/ketanPatil26">
   <img align="left" alt="Ketan's Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
