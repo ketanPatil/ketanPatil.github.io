@@ -1,15 +1,3 @@
-<a href="https://twitter.com/ketanPatil26">
-  <img align="left" alt="Ketan's Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
-</a>
-<a href="https://linkedin.com/in/PatilKetan">
-  <img align="left" alt="Ketan's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
-</a>
-<a href="https://github.com/ketanPatil">
-  <img align="left" alt="Ketan's Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
-</a>
-<br/>
-<br/>
-
 Machine Learning | OCR | Java | Open Source
 
 ## About
