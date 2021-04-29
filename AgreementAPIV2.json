@@ -1,0 +1,891 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "AgreementWebApi"
+  },
+  "host": "test.fia-tech.com",
+  "basePath": "/AgreementApi",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v2/agreement/{id}": {
+      "get": {
+        "tags": [
+          "Agreement"
+        ],
+        "summary": "Get Agreement Details based on the AgreementId including Deleted State",
+        "operationId": "Agreement_GetAgreementDetails",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Agreement Id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response contains the details of agreement",
+            "schema": {
+              "$ref": "#/definitions/AgreementModel"
+            }
+          }
+        }
+      }
+    },
+    "/v2/agreement/updates": {
+      "get": {
+        "tags": [
+          "Agreement"
+        ],
+        "summary": "Get Updated Agreements based on the fromDate and toDate in the provided timezone",
+        "operationId": "Agreement_GetUpdatedAgreements",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "fromDate",
+            "in": "query",
+            "description": "From Date",
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "description": "To Date",
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response contains the list of agreements which were last modified between the dates provided",
+            "schema": {
+              "$ref": "#/definitions/AgreementInfo"
+            }
+          }
+        }
+      }
+    },
+    "/api/ApiNotFound/Handle404": {
+      "get": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/ApiNotFound": {
+      "get": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "ApiNotFound"
+        ],
+        "operationId": "ApiNotFound_Handle404",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/Status/Ping": {
+      "get": {
+        "tags": [
+          "Status"
+        ],
+        "operationId": "Status_Ping",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "text/html",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AgreementModel": {
+      "type": "object",
+      "properties": {
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ExecutedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "CustomerReference": {
+          "type": "string"
+        },
+        "ProfitCenter": {
+          "type": "string"
+        },
+        "SuppDocCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "GroupId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "PriorAgreementId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "FollowingAgreementId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "AgreementTransitionedFrom": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "AgreementTransitionedTo": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "BillWho": {
+          "type": "string"
+        },
+        "Jurisdiction": {
+          "type": "string"
+        },
+        "Parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgreementPartyModel"
+          }
+        },
+        "ClearingAccounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClearingAccountModel"
+          }
+        },
+        "RateSchedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgreementRateScheduleModel"
+          }
+        },
+        "UnsupportedProducts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnsupportedProductModel"
+          }
+        },
+        "AgreementId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "AgreementType": {
+          "type": "string"
+        },
+        "TemplateVersion": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "InitiatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "LastModified": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "TerminationDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "AgreementPartyModel": {
+      "type": "object",
+      "properties": {
+        "AgreementPartyRole": {
+          "type": "string"
+        },
+        "PartyFirms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyFirmModel"
+          }
+        },
+        "PartyId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "ParentId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "InstitutionId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "LegalEntityIdentifier": {
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedOn": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "ClearingAccountModel": {
+      "type": "object",
+      "properties": {
+        "ClearingAccountType": {
+          "type": "string"
+        },
+        "AccountId": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ExpirationDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "AgreementRateScheduleModel": {
+      "type": "object",
+      "properties": {
+        "ExecutingAccounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExecutingAccountModel"
+          }
+        },
+        "Exchanges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RateScheduleExchangeModel"
+          }
+        },
+        "RateScheduleId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "FileName": {
+          "type": "string"
+        },
+        "DownloadFileName": {
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedOn": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "UnsupportedProductModel": {
+      "type": "object",
+      "properties": {
+        "ExchangeCode": {
+          "type": "string"
+        },
+        "ProductGroupCode": {
+          "type": "string"
+        },
+        "ProductCode": {
+          "type": "string"
+        },
+        "ProductType": {
+          "type": "string"
+        },
+        "UnsupportedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RateScheduleFileNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "HasUnsupportedRateSchedules": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PartyFirmModel": {
+      "type": "object",
+      "properties": {
+        "FirmCode": {
+          "type": "string"
+        },
+        "ExchangeCode": {
+          "type": "string"
+        },
+        "PrimaryFlag": {
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "UpdatedOn": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "ExecutingAccountModel": {
+      "type": "object",
+      "properties": {
+        "AccountId": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ExpirationDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "RateScheduleExchangeModel": {
+      "type": "object",
+      "properties": {
+        "Rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RateModel"
+          }
+        },
+        "ExchangeCode": {
+          "type": "string"
+        },
+        "DirectBill": {
+          "type": "boolean"
+        }
+      }
+    },
+    "RateModel": {
+      "type": "object",
+      "properties": {
+        "ProductGroupCode": {
+          "type": "string"
+        },
+        "ProductCode": {
+          "type": "string"
+        },
+        "ProductType": {
+          "type": "string"
+        },
+        "TradeType": {
+          "type": "string"
+        },
+        "SpreadType": {
+          "type": "string"
+        },
+        "RateType": {
+          "type": "string"
+        },
+        "ExecutionType": {
+          "type": "string"
+        },
+        "ExecutionTypeName": {
+          "type": "string"
+        },
+        "Amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "Min": {
+          "format": "double",
+          "type": "number"
+        },
+        "Max": {
+          "format": "double",
+          "type": "number"
+        },
+        "MinMaxDefine": {
+          "type": "string"
+        },
+        "MinMaxApply": {
+          "type": "string"
+        },
+        "AddOnAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "AddOnApply": {
+          "type": "string"
+        },
+        "RateCurrency": {
+          "type": "string"
+        },
+        "DefaultExecutionType": {
+          "type": "boolean"
+        },
+        "Tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TierModel"
+          }
+        },
+        "Bands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BandModel"
+          }
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "TierModel": {
+      "type": "object",
+      "properties": {
+        "Period": {
+          "type": "string"
+        },
+        "ApplyTo": {
+          "type": "string"
+        },
+        "StartType": {
+          "type": "string"
+        },
+        "StartTypeValue": {
+          "format": "double",
+          "type": "number"
+        },
+        "TierAmount": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "BandModel": {
+      "type": "object",
+      "properties": {
+        "ApplyTo": {
+          "type": "string"
+        },
+        "BandValueType": {
+          "type": "string"
+        },
+        "BandRateType": {
+          "type": "string"
+        },
+        "BandNum": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Start": {
+          "format": "double",
+          "type": "number"
+        },
+        "End": {
+          "format": "double",
+          "type": "number"
+        },
+        "Rate": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "AgreementInfo": {
+      "type": "object",
+      "properties": {
+        "AgreementId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "AgreementType": {
+          "type": "string"
+        },
+        "TemplateVersion": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "InitiatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "LastModified": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "TerminationDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "X-API-Key": {
+      "type": "apiKey",
+      "description": "API Key Authentication",
+      "name": "X-API-Key",
+      "in": "header"
+    }
+  }
+}
